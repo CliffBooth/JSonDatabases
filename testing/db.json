@@ -1,0 +1,13 @@
+{
+  "person": {
+    "name": 20,
+    "car": {
+      "model": "Tesla Roadster",
+      "year": "2018"
+    },
+    "rocket": {
+      "name": "Falcon 9",
+      "launches": "87"
+    }
+  }
+}
