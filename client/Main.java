@@ -3,16 +3,13 @@ package client;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.google.gson.*;
-import com.google.gson.stream.MalformedJsonException;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.io.File;
 import java.io.IOException;
 import java.net.Socket;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 
 public class Main {
     static private final int PORT = 8000;
@@ -31,7 +28,6 @@ public class Main {
     static private String file;
 
     private static String filePath = "src/client/data/";
-//    private static String filePath = "src/client/data/";
 
     public static void main(String[] args) throws IOException {
         JCommander.newBuilder().addObject(new Main()).build().parse(args);

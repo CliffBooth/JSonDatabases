@@ -19,7 +19,7 @@ public class Main {
     private static Lock writeLock = lock.writeLock();
 
     private static ServerSocket serverSocket;
-        private static String filePath = "src/server/data/db.json";
+    private static String filePath = "src/server/data/db.json";
 
     public static void main(String[] args) throws IOException {
         serverSocket = new ServerSocket(PORT);
@@ -27,7 +27,7 @@ public class Main {
         ExecutorService executor = Executors.newCachedThreadPool();
         while (true) {
             Socket socket = serverSocket.accept();
-            executor.submit(() -> {
+            executor.execute(() -> {
                 try {
                     run(socket);
                 } catch (Exception e) {
